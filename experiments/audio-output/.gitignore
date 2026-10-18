@@ -1,0 +1,8 @@
+# Local outputs are never source.
+out/
+*.obj
+*.dll
+*.pdb
+*.lib
+*.exp
+*.log
