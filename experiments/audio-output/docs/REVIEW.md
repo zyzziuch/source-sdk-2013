@@ -8,10 +8,10 @@ User-confirmed Windows x64 real hardware:
 
 Automated/tool verification:
 - Experimental host/client compilation and linking.
-- New parameterized packaging recipe successfully compiled/linked using existing SDK objects.
+- Parameterized recipe successfully compiled/linked using a separate fresh checkout after fresh library/client/server builds; no previous development objects reused.
 - Frozen source copies hash-equal to validated sources before commits; manifests contain no local paths.
 - No new automated transaction assertion count claimed. Hardware reports are distinct from code review and compile checks.
-Untested: clean checkout package build, Linux, other architectures, Counter-Strike: Source, official retail client integration, physical DLL unload, all future GameUI/resource versions.
+Untested: Linux, other architectures, Counter-Strike: Source, official retail client integration, physical DLL unload, all future GameUI/resource versions.
 
 Known limitations:
 - Earlier unexplained intermittent termination in recovery development remains documented, despite later successful cycles. Separate host crash was diagnosed in public PropertySheet cross-module hotkey traversal and corrected with a same-module mount; repeated user tests passed afterward.
@@ -35,4 +35,8 @@ CONTRIBUTING requires ownership/authorization and identifying third-party materi
 Recommendation:
 Propose the minimal SDK/GameUI extension contract first, with this runnable reference as evidence, in a separate discussion/proposal after authorization. Preserve PR #2158. If Valve accepts standalone-window architecture, prepare a separate dependent PR with host VPC project and resource integration; do not silently expand #2158.
 Official integration needs Valve decisions on module ownership/loading, resource mount/button, localization resources, stable ABI/lifecycle contract, packaging and shared engine/SoundSystem reuse. Public sources suffice to build this prototype with SDK-provided binary dependencies; they do not provide a self-contained rebuild of private GameUI/engine, or automatic official TF2 integration.
-Submission blockers: clean build-system integration and clean-checkout run; dependency/resource provenance boundary accepted; debug/test surface cleanup and stable ABI policy; Valve architectural agreement. Functional runtime success is established, upstream readiness is not.
+Submission blockers: dedicated supported build-system integration; dependency/resource provenance boundary accepted; debug/test surface cleanup and stable ABI policy; Valve architectural agreement. Functional runtime success is established, upstream readiness is not.
+
+Fresh resource/runtime audit:
+The full old experimental override contained five unrelated visible=0 edits (CloseCaptionCheck, AudioSpokenLanguage, AudioSpokenLanguageLabel, RequiresRestartLabel, Label2). The published mount assembler preserves the original visible=1 properties. Fresh isolated runtime with that mount-only resource successfully opened the button/dialog, switched endpoints and refreshed on hotplug.
+One earlier fresh-runtime termination occurred on headphone removal without a new dump or stack. Approximately 2–3 later cycles passed, including monitor fallback, saved preference preservation and unavailable-device list updates. The cause remains unresolved; no fix or exhaustive reliability is claimed. This is distinct from the earlier diagnosed hotkey crash. Repetitive testing was stopped by agreement unless a reproducible failure appears.
