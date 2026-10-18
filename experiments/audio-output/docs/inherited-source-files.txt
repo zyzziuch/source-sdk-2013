@@ -1,0 +1,14 @@
+game/mod_tf/resource/audio_output_english.txt
+src/common/GameUI/AudioOutputDevicesWin.cpp
+src/common/GameUI/AudioOutputDevicesWin.h
+src/common/GameUI/AudioOutputPanel.cpp
+src/common/GameUI/AudioOutputPanel.h
+src/common/GameUI/AudioOutputRecoveryPolicy.h
+src/common/GameUI/AudioOutputSelection.cpp
+src/common/GameUI/AudioOutputSelection.h
+src/common/GameUI/AudioOutputWatchWin.cpp
+src/common/GameUI/AudioOutputWatchWin.h
+src/game/client/client_tf.vpc
+src/game/client/tf/tf_audio_output_recovery.cpp
+src/game/client/tf/vgui/tf_controls.cpp
+src/game/client/tf/vgui/tf_controls.h

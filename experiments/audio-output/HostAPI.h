@@ -7,8 +7,3 @@ typedef vgui::VPANEL (*HostCreateFn)(vgui::VPANEL);
 typedef bool (*HostBindFn)(vgui::VPANEL);
 typedef void (*HostVoidFn)();
 struct AudioHostAPI { HostInitFn Init; HostCreateFn Create; HostBindFn Bind; HostVoidFn Unbind; HostVoidFn Destroy; HostVoidFn Inspect; HostCreateFn RenderProbe; HostVoidFn AlphaOnce; void (*Update)(float); void (*SetPolish)(bool); };
-
-
-
-
-
