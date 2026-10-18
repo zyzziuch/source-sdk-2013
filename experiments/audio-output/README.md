@@ -13,3 +13,15 @@ Clean Windows x64 Release reproduction passed for the SDK libraries, base client
 The parent commits above are already included in this branch (no separate cherry-pick required) and come from [PR #2158](https://github.com/ValveSoftware/source-sdk-2013/pull/2158). This reference does not modify that PR. It is an isolated SDK-mod prototype, not an upstream-ready replacement for private GameUI or a validated official retail TF2 integration.
 
 Repository [LICENSE](../../LICENSE), [third-party notices](../../thirdpartylegalnotices.txt) and [CONTRIBUTING](../../CONTRIBUTING) remain applicable. The new integration contains no copied Alien Swarm implementation or extracted full GameUI resource.
+
+## Screenshots
+
+The original Options > Audio page with the Select Audio Output entry button.
+
+![TF2 Options Audio tab with Select Audio Output button](docs/images/tf2-options-audio.png)
+
+The separate native audio-device selection dialog with device list, Refresh and transaction controls.
+
+![TF2 audio output selection dialog](docs/images/tf2-audio-output-selector.png)
+
+These screenshots show the isolated SDK-mod prototype, not the official retail TF2 client.
